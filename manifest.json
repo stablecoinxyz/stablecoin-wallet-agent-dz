@@ -10,6 +10,7 @@
     "slug": "stablecoin-wallet-agent",
     "category": "finance",
     "partnerName": "StableCoin",
+    "authorName": "StableCoin",
     "tags": ["wallet", "stablecoin", "base", "sbc", "payments", "defi"]
   },
   "secrets": [

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "agent": {
+    "name": "StableCoin Wallet Agent",
+    "description": "AI agent that manages your SBC stablecoin wallet on Base — check balances, send, receive, and view transaction history.",
+    "emoji": "💵",
+    "vibe": "Helpful and careful with money"
+  },
+  "template": {
+    "slug": "stablecoin-wallet-agent",
+    "category": "finance",
+    "partnerName": "StableCoin",
+    "tags": ["wallet", "stablecoin", "base", "sbc", "payments", "defi"]
+  },
+  "secrets": [
+    {
+      "name": "DOLLAR_WALLET_API_KEY",
+      "description": "Your StableCoin Wallet agent API key — generate this in DollarWallet → Settings → Agent Access",
+      "required": true
+    },
+    {
+      "name": "DOLLAR_WALLET_API_URL",
+      "description": "Your DollarWallet app URL (e.g. https://app.yourdomain.com)",
+      "required": true
+    }
+  ]
+}

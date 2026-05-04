@@ -18,6 +18,16 @@
       "name": "DOLLAR_WALLET_API_URL",
       "description": "The DollarWallet app URL (set by admin, e.g. https://app.yourdomain.com)",
       "required": true
+    },
+    {
+      "name": "SBC_AGENT_ID",
+      "description": "Your agent ID from the SBC agent payments platform (agents.stablecoin.xyz → API Keys panel)",
+      "required": true
+    },
+    {
+      "name": "SBC_AGENT_API_KEY",
+      "description": "Your API key from the SBC agent payments platform (agents.stablecoin.xyz → API Keys panel)",
+      "required": true
     }
   ]
 }

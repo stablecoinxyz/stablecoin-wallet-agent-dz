@@ -15,13 +15,8 @@
   },
   "secrets": [
     {
-      "name": "DOLLAR_WALLET_API_KEY",
-      "description": "Your StableCoin Wallet agent API key — generate this in DollarWallet → Settings → Agent Access",
-      "required": true
-    },
-    {
       "name": "DOLLAR_WALLET_API_URL",
-      "description": "Your DollarWallet app URL (e.g. https://app.yourdomain.com)",
+      "description": "The DollarWallet app URL (set by admin, e.g. https://app.yourdomain.com)",
       "required": true
     }
   ]

@@ -19,14 +19,13 @@ You need a running instance of [DollarWallet](https://github.com/stablecoin-xyz/
 
 In your DollarWallet app, go to **Settings → Agent Access** and click **Generate API Key**. Copy the key — it's only shown once.
 
-### 2. Deploy the template on Pinata
+### 2. Deploy the template on Pinata (admin — one time)
 
 1. Go to [agents.pinata.cloud](https://agents.pinata.cloud) and create a new agent from this template
-2. Set the following secrets when prompted:
+2. Set the following secret when prompted:
 
 | Secret | Value |
 |--------|-------|
-| `DOLLAR_WALLET_API_KEY` | The key you generated in step 1 |
 | `DOLLAR_WALLET_API_URL` | Your DollarWallet app URL (e.g. `https://app.yourdomain.com`) |
 
 ### 3. Set the system prompt
@@ -34,8 +33,12 @@ In your DollarWallet app, go to **Settings → Agent Access** and click **Genera
 Paste the following as the agent's system prompt:
 
 ```
-You are a DollarWallet agent. On startup, load your skill doc at {DOLLAR_WALLET_API_URL}/skill.md and use it as the authoritative reference for every endpoint and flow. Never send funds without first showing a preview and receiving explicit user confirmation.
+You are a DollarWallet agent. On startup, load your skill doc at {DOLLAR_WALLET_API_URL}/skill.md and use it as the authoritative reference for every endpoint and flow. Ask the user for their DollarWallet API key before making any requests. Never send funds without first showing a preview and receiving explicit user confirmation.
 ```
+
+### 4. Users connect with their own key
+
+Each user generates their own API key in DollarWallet → Settings → Agent Access, then pastes it into the agent chat when prompted. The key is used only for that session.
 
 ## Example prompts
 

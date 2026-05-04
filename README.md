@@ -7,7 +7,8 @@ A [Pinata](https://agents.pinata.cloud) AI agent template that connects to your 
 - Check your SBC balance
 - Get your wallet address for receiving funds
 - View recent transaction history
-- Send SBC to any address (with confirmation step before executing)
+- Send SBC to any address on Base (with confirmation step before executing)
+- Bridge SBC from Base to Radius (max $100/tx, with confirmation + status polling)
 
 ## Requirements
 
@@ -47,11 +48,14 @@ What's my SBC balance?
 What's my wallet address?
 Show my recent transactions
 Send 5 SBC to 0x1234...
+Send 10 SBC to 0x1234... on Radius
+Bridge 20 SBC to 0xabcd... on Radius
 ```
 
-## Supported chain
+## Supported chains
 
-- **Network:** Base mainnet
+- **Base mainnet** — direct send
+- **Radius** — bridge via Brale (max $100/tx)
 - **Token:** SBC (18 decimals)
 - **Explorer:** [basescan.org](https://basescan.org)
 

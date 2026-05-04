@@ -11,7 +11,7 @@
     "category": "finance",
     "partnerName": "StableCoin",
     "authorName": "StableCoin",
-    "tags": ["wallet", "stablecoin", "base", "sbc", "payments", "defi"]
+    "tags": ["wallet", "stablecoin", "base", "radius", "sbc", "payments", "defi", "bridge"]
   },
   "secrets": [
     {

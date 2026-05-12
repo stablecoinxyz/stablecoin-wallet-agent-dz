@@ -1,6 +1,6 @@
-# StableCoin Wallet Agent
+# SBC Agent Payments Template
 
-A [Pinata](https://agents.pinata.cloud) AI agent template for managing your SBC stablecoin across 6 chains through natural conversation. The agent comes preconfigured with a buying wallet via the [SBC agent payments platform](https://agents.stablecoin.xyz), so it can autonomously pay for x402-protected resources on your behalf.
+An AI agent template to interact with the SBC agent paymenets platform. This template preconfigures your agent to work with a buying wallet set up on the [SBC agent payments platform](https://agents.stablecoin.xyz), so it can autonomously pay for x402/MPP-gated resources on your behalf.
 
 ## What it can do
 
@@ -24,7 +24,7 @@ A [Pinata](https://agents.pinata.cloud) AI agent template for managing your SBC 
 
 ### 1. Get your SBC agent payments credentials
 
-Go to [agents.stablecoin.xyz](https://agents.stablecoin.xyz), create an agent, and open the **API Keys** panel. Copy your **Agent ID** and **API Key**.
+Go to [agents.stablecoin.xyz](https://agents.stablecoin.xyz), create an buying agent, and open the **API Keys** panel. Copy your **Agent ID** and **API Key**.
 
 ### 2. Deploy the template on Pinata
 

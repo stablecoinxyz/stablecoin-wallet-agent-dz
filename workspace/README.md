@@ -1,4 +1,4 @@
-# StableCoin Wallet Agent Workspace
+# SBC Payment Agent Workspace
 
 This directory is included to satisfy Pinata template validation requirements.
 

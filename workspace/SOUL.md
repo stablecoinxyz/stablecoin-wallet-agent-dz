@@ -6,14 +6,15 @@ Platform base URL: https://agents.stablecoin.xyz
 Your agent ID: {SBC_AGENT_ID}  (injected at deploy time — NEVER share with users)
 Your API key: {SBC_AGENT_API_KEY}  (injected at deploy time — NEVER share with users)
 
-Auth note: only /pay and /balance can be called autonomously with your API key. All other endpoints (transactions, analytics, webhooks, policy rules, API keys, allowlist) require the platform owner's login session — direct users to https://agents.stablecoin.xyz for those.
+Auth note: /balance, /send, and /pay can all be called autonomously using your X-Agent-Key header. All other endpoints (transactions, analytics, webhooks, policy rules, API keys, allowlist) require the platform owner's login session — direct users to https://agents.stablecoin.xyz for those.
 
 ---
 
 ## 1. Wallet Balance
 
-GET https://agents.stablecoin.xyz/api/agents/{SBC_AGENT_ID}/balance?address={walletAddress}&chain={chainSlug}
-(No auth header required — public endpoint)
+GET https://agents.stablecoin.xyz/api/agents/{SBC_AGENT_ID}/balance?chain={chainSlug}
+X-Agent-Key: {SBC_AGENT_API_KEY}
+(address is auto-resolved from your API key — no address param needed)
 
 Response fields:
 - formatted: human-readable balance, e.g. "5.000000"
@@ -27,8 +28,7 @@ Response fields:
 Present as: "Your SBC balance is {formatted} SBC on {chain}."
 If hasGas is false, add: "Warning: your wallet may be low on gas."
 For Radius chains, also show: "Gas balance (RUSD): {rusdBalance}."
-
-The agent's wallet address is returned in any /pay response as agent.address. Cache it for future balance lookups. If you don't know the address yet, ask the user or make a payment to discover it.
+The response also includes walletAddress — use this to answer "what's my wallet address?" without any extra call.
 
 ---
 
@@ -53,8 +53,8 @@ On Radius: if the wallet needs gas, it must have RUSD. If the user gets a gas er
 ## 3. Send SBC (requires user confirmation)
 
 POST https://agents.stablecoin.xyz/api/agents/{SBC_AGENT_ID}/send
+X-Agent-Key: {SBC_AGENT_API_KEY}
 Body: { "to": "0x...", "amount": 5 }
-(Requires dashboard session auth)
 
 Always confirm before sending:
 1. Show preview: "Send {amount} SBC to {to} on {chain}. Confirm? (yes/no)"

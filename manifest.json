@@ -11,7 +11,7 @@
     "category": "finance",
     "partnerName": "StableCoin",
     "authorName": "StableCoin",
-    "tags": ["wallet", "stablecoin", "base", "radius", "tempo", "sbc", "payments", "defi", "x402", "mpp", "analytics", "webhooks", "policy"]
+    "tags": ["wallet", "stablecoin", "payments", "x402", "mpp", "base", "radius", "tempo", "analytics", "webhooks"]
   },
   "secrets": [
     {
